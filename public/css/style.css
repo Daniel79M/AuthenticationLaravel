@@ -1,0 +1,20 @@
+
+a{
+    list-style-type: none;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.input_form{
+    background-color: rgba(15, 15, 15, 0.589);
+    width: 22%;
+    height: 500px;
+    gap: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: aliceblue;
+    align-items: center;
+    /* box-sizing: border-box; */
+}
