@@ -1,0 +1,77 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Interfaces\UserInterface;
+use Illuminate\Http\Request;
+
+class UserControllers extends Controller
+{
+
+    private UserInterface $userInterface;
+
+    public function __construct( userInterface $userInterface)
+    {
+        $this->userInterface = $userInterface;
+    }
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        $data = $this->userInterface->index();
+
+        return view('users.index', [
+            'page' => 'users',
+            'users' => $data,
+        ]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
+    }
+}

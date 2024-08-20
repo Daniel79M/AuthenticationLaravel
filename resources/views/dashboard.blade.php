@@ -9,7 +9,7 @@
     <title>Authentification</title>
 </head>
 <body>
-    <table>
+    <table class="navbar">
         <tbody>
             <tr>
                 <td>
@@ -23,6 +23,6 @@
             </tr>
         </tbody>
     </table>
-    <h3>Bienvenue {{ Auth::user()->name }}</h3>
+    {{-- <h3>Bienvenue {{ Auth::user()->name }}</h3>; --}}
 </body>
-</html>
+</html> 

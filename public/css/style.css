@@ -1,20 +1,89 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.bg{
+    /* background-color: rgba(125, 125, 128, 0.932); */
+    background:url(../assets/images/pattern-8877700_1280.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.doc{
+    padding:150px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 
 a{
     list-style-type: none;
     text-decoration: none;
-    color: aliceblue;
+    color: rgb(83, 83, 221);
 }
 
 .input_form{
-    background-color: rgba(15, 15, 15, 0.589);
-    width: 22%;
-    height: 500px;
+    background:black;
+    width: 400px;
+    height: fit-content;
+    padding: 10px 0;
     gap: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: aliceblue;
+    color: rgb(252, 254, 255);
     align-items: center;
+    border: solid 3px;
+    border-color: rgb(1, 1, 78);
     /* box-sizing: border-box; */
+}
+
+.btn{
+    color: aliceblue;
+    background:linear-gradient(to right, blue,rgb(255, 255, 255));
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+.btnSumbit{
+    color: aliceblue;
+    background:linear-gradient(to right, blue,rgb(255, 255, 255));
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.login h1{
+    text-align: center;
+}
+
+
+.login input{
+    background: transparent;
+    border: solid 2px;
+    border-color: blue;
+    width: 270px;
+    padding:15px;
+    color: white;
+    border-radius: 20px;
+}
+ul{
+    list-style: none;
+}
+
+.error{
+    background-color: rgb(192, 46, 46);
+    color: white;
+    padding: 10px;
+    width: 270px;
+    border-radius: 10px;
+}
+
+.navbar{
+    width: 100%;
 }

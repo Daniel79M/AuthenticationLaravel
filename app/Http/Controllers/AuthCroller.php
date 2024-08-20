@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\ForgottenPasswordRequest;
+use App\Http\Requests\Authentication\ForgottenPasswordRequest as AuthenticationForgottenPasswordRequest;
 use App\Http\Requests\Authentication\LoginRequest;
 use App\Http\Requests\Authentication\RegistrationRequest;
 use App\Interfaces\AuthenticationInterface;
@@ -17,6 +19,26 @@ class AuthCroller extends Controller
     }
 
     public function Home(){
+        return view('dashboard');
+    }
+
+    public function forgottenPassword(AuthenticationForgottenPasswordRequest $request){
+        $email = [
+            'email' =>$request->email,
+        ];
+        try{
+            $user = $this->authInterface->forgottenPassword($email);
+
+            return redirect()->route('otpCode');
+        }catch (\Exception $ex){
+            return back()->with('error', 'Une erreur est survenu lors du traitement, Réessayez!');
+        }
+
+        // return view('otp');
+    }
+
+    public function checkOtpCode()
+    {
         return view('dashboard');
     }
 
